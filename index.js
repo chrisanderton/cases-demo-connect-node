@@ -43,7 +43,8 @@ app.set("view engine", "ejs");
  * Jobs Landing Page
  */
 app.get("/",function defaultRoute(req, res){
-    var query = "SELECT * FROM salesforce.case";
+    //var query = "SELECT * FROM salesforce.case";
+    var query = "SELECT * FROM salesforce.case where accountid = '0010Y0000056BLqQAM'";
     var result = [];
     sharedPgClient.query(query, function(err, result){
         console.log("Jobs Query Result Count: " + result.rows.length);
