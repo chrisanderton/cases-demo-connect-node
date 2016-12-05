@@ -48,18 +48,16 @@
           <!-- Desktop View -->
           <table class="table table-condensed">
               <tr>
-                  <td class="text-left"><h5>Account Name</h5></td>
-                  <td class="text-left"><h5>Account Number</h5></td>
-                  <td class="text-left"><h5>City</h5></td>
-                  <td class="text-left"><h5>Active Date</h5></td>
+                  <td class="text-left"><h5>Case Number</h5></td>
+                  <td class="text-left"><h5>Case Subject</h5></td>
+                  <td class="text-left"><h5>Case Status</h5></td>
               </tr>
 
               <% for(var i=0; i<connectResults.length; i++) { %>
                   <tr>
-                      <td class="text-left"><%= connectResults[i].name %></td>
-                      <td class="text-left"><%= connectResults[i].accountnumber %></td>
-                      <td class="text-left"><%= connectResults[i].billingcity %></td>
-                      <td class="text-left"><%= new Date(connectResults[i].createddate).toJSON().substring(0,10) %></td>
+                      <td class="text-left"><%= connectResults[i].casenumber %></td>
+                      <td class="text-left"><%= connectResults[i].subject %></td>
+                      <td class="text-left"><%= connectResults[i].status %></td>
                   </tr>
               <% } %>
 
